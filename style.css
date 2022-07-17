@@ -127,8 +127,10 @@ header {
     margin: auto;
     color: #fff;
     text-align: center;
-    z-index: 2;
+    z-index: 5;
     animation: fade-slide-up ease 1s;
+    background: rgb(66 65 65 / 50%);
+    padding: 40px 30px;
 }
 #home .inner-wrap h1 {
     font-size: 48px;
@@ -136,6 +138,16 @@ header {
 /* About */
 #about {
     background: url('images/forest.jpg');
+}
+
+/* Vanta JS */
+#vanta-section {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 /* Responsive */
@@ -150,6 +162,13 @@ header {
     }
     .menu {
         display: none;
+    }
+    #home .inner-wrap {
+        padding: 20px;
+        margin: auto 40px;
+    }
+    #home .inner-wrap h1 {
+        font-size: 36px;
     }
 }
 
