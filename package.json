@@ -1,0 +1,27 @@
+{
+  "name": "personal-website.com",
+  "version": "1.0.0",
+  "description": "A personal website created by Leonil Louis Lalisan.",
+  "main": "script.js",
+  "scripts": {
+    "compile": "sass --watch --no-source-map assets/styles/main.scss build/styles/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonLouis/personal-practice-web.git"
+  },
+  "keywords": [
+    "Personal",
+    "Website",
+    "Portfolio"
+  ],
+  "author": "Leonil Louis Lalisan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonLouis/personal-practice-web/issues"
+  },
+  "homepage": "https://github.com/LeonLouis/personal-practice-web#readme",
+  "dependencies": {
+    "sass": "^1.58.0"
+  }
+}
