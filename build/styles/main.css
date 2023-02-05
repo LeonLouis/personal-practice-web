@@ -1,0 +1,195 @@
+@font-face {
+  font-family: Marcellus;
+  src: url(/assets/fonts/Marcellus-Regular.ttf);
+  font-style: normal;
+}
+/* Animations */
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Marcellus", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+html body header .main-header {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  animation: fade-slide-up ease 1s;
+}
+@media only screen and (max-width: 767px) {
+  html body header .main-header {
+    width: 100%;
+  }
+}
+html body header .main-header .logo {
+  width: 150px;
+  margin-right: auto;
+}
+html body header .main-header .logo a {
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: 0;
+}
+@media only screen and (max-width: 480px) {
+  html body header .main-header .menu {
+    display: none;
+  }
+}
+html body header .main-header .menu li {
+  display: inline-block;
+  margin: 0px 10px;
+  vertical-align: middle;
+}
+html body header .main-header .menu li :last-child a {
+  transition: all 0.25s ease-in-out 0s;
+}
+html body header .main-header .menu li :last-child a:hover::after {
+  width: 100%;
+}
+html body header .main-header .menu li :last-child a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+html body header .main-header .menu a {
+  text-decoration: none;
+  color: #ffffff;
+  vertical-align: middle;
+}
+html body header .main-header .mobile-menu {
+  display: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  padding: 5px 0px;
+}
+@media only screen and (max-width: 480px) {
+  html body header .main-header .mobile-menu {
+    display: block;
+  }
+}
+html body header .main-header .mobile-menu span {
+  height: 2px;
+  background: #ffffff;
+  display: block;
+  width: 25px;
+  margin: 5px;
+  transition: all 0.3s ease-in;
+}
+html body #mobile-sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: -50%;
+  width: 50%;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s ease-in;
+}
+@media only screen and (max-width: 480px) {
+  html body #mobile-sidebar {
+    display: block;
+  }
+}
+html body #mobile-sidebar .mobile-wrap {
+  text-align: center;
+  padding: 10px;
+  transform: translateY(70%);
+}
+html body #mobile-sidebar .mobile-wrap > a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+html body #mobile-sidebar .mobile-wrap .mobile-socmed a {
+  padding: 5px;
+}
+html body #mobile-sidebar .open span:first-child {
+  width: 20px;
+  margin-left: 10px;
+}
+html body #mobile-sidebar .open span:nth-child(2) {
+  width: 23px;
+  margin-left: 7px;
+}
+html body .main {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: bottom !important;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+html body .main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+html body #home {
+  background: url("/assets/images/man-with-pc.jpg");
+}
+html body #home .inner-wrap {
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  z-index: 5;
+  animation: fade-slide-up ease 1s;
+  background: rgba(66, 65, 65, 0.5);
+  padding: 40px 30px;
+}
+@media only screen and (max-width: 480px) {
+  html body #home .inner-wrap {
+    padding: 20px;
+    margin: auto 40px;
+  }
+}
+html body #home .inner-wrap h1 {
+  font-size: 48px;
+}
+@media only screen and (max-width: 480px) {
+  html body #home .inner-wrap h1 {
+    font-size: 36px;
+  }
+}
+html body #about {
+  background: url("/assets/images/forest.jpg");
+}
+html body #vanta-section {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
